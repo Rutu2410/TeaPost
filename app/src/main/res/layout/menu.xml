@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/b"
+    tools:context=".MENU">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:backgroundTint="@color/green"
+        android:background="@drawable/green_boder">
+
+    </TextView>
+    <ImageView
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/logo"
+        tools:ignore="ContentDescription,RtlHardcoded">
+
+    </ImageView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#065E2E"
+        android:backgroundTint="@color/green"
+        app:menu="@menu/bottom_navmenu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        tools:ignore="VisualLintBottomNav" />
+    <!-- Buttons to Trigger Animations -->
+    <Button
+        android:id="@+id/slide_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slide Up"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="80dp"
+        tools:ignore="HardcodedText,VisualLintOverlap" />
+
+    <Button
+        android:id="@+id/slide_down_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slide Down"
+        android:textColor="#065E2E"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        tools:ignore="HardcodedText,VisualLintOverlap" />
+
+    <!-- RecyclerView to display items -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="690dp"
+            android:layout_marginTop="89dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

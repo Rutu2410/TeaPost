@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Toolbar at the top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#065E2E"
+        app:cornerRadius="40dp" />
+
+    <!-- Button in the toolbar -->
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        android:backgroundTint="#065E2E"
+        style="@style/Widget.AppCompat.ListView.Menu"
+        android:foreground="@drawable/baseline_menu_24"
+        tools:ignore="PxUsage,RtlHardcoded,SpeakableTextPresentCheck" />
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="270dp"
+        android:layout_marginTop="2dp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/logo"
+        tools:ignore="ContentDescription" />
+
+    <!-- ScrollView to make content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageSwitcher"
+        android:layout_marginTop="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="60dp"
+                android:background="@drawable/men5">
+            </ImageView>
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/tea_desi_cafe"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="50dp"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:textAlignment="center"
+                android:textColor="#474A48"
+                android:text="@string/desicafe">
+
+            </TextView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2000dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/mast">
+            </ImageView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
